@@ -1,0 +1,23 @@
+<Project>
+	<PropertyGroup Label="TargetVersion">
+		<TargetFramework>net6.0</TargetFramework>
+		<LangVersion>10</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+    <PropertyGroup Label="Extras">
+		<Newtonsoft_Json>12.0.3</Newtonsoft_Json>
+	</PropertyGroup>
+	<PropertyGroup>
+		<CodeAnalysisRuleset>$(MSBuildThisFileDirectory)MyRules.ruleset</CodeAnalysisRuleset>
+	</PropertyGroup>
+	<ItemGroup>
+		<PackageReference Include="Serilog" Version="2.12.0" />
+	</ItemGroup>
+	<ItemGroup>
+		<Using Include="Serilog" />
+	</ItemGroup>
+	<ItemGroup>
+       <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
+       <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" />
+  </ItemGroup>
+</Project>
